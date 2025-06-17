@@ -1,0 +1,30 @@
+[package]
+name = "sawshark"
+version = "0.2.0"
+authors = ["Chris Saunders <csaunders@pacificbiosciences.com>"]
+description = "SV VCF annotator"
+edition = "2024"
+license-file="LICENSE.md"
+
+[build-dependencies]
+vergen-gitcl = "1"
+
+[dependencies]
+camino = "1"
+chrono = "0.4"
+clap = { version = "4", features = ["derive", "suggestions"] }
+exitcode = "1"
+fern = "0.7"
+hhmmss = "0.1"
+log = "0.4"
+num_cpus = "1"
+
+# Go back to upstream crates.io parasail-rs or (https://github.com/nsbuitrago/parasail-rs) once PRs are in release:
+parasail-rs = { git = "https://github.com/ctsa/parasail-rs.git" }
+
+rayon = "1"
+rust-htslib = { version = "0.49", default-features = false }
+rust-vc-utils = { path="lib/rust-vc-utils" }
+simple-error = "0.3"
+strum = { version = "0.27", features = ["derive"] }
+unwrap = "1"
