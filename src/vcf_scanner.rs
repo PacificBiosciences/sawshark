@@ -169,11 +169,11 @@ mod tests {
         let anno_seqs = get_default_annotations();
         let anno_seq = &anno_seqs[0];
         let anno_params =
-            AnnotationParams::new(&anno_seq, min_similarity, min_fraction_of_template_size);
+            AnnotationParams::new(anno_seq, min_similarity, min_fraction_of_template_size);
 
         let seq = b"ACAGTTCTTTTTTTTTTTTTTTGAGACGGAGTCTCGCTCTGTCGCCCAGGCTGGAGTGCAGTGGCGGGATCTCGGCTCACTGCAAGCTCCGCCTCCCGGGTTCACGCCATTCTCCTGCCTCAGCCTCCCGAGTAGCTGGGACTACAGGCGCCCGCCACCACGCCCGGCTAATTTTTTTGTATTTTTAGTAGAGACGGGGTTTCACCGTTTTAGCCGGGATGGTCTCGATCTCCTGACCTCGTGATCCGCCCGCCTCGGCCTCCCAAAGTGCTGGGATTACAGGCGTGAGCCACCGCGCCCGGCCC";
 
-        let result = test_allele_match(&anno_seq, &anno_params, seq);
+        let result = test_allele_match(anno_seq, &anno_params, seq);
 
         assert!(result);
     }
